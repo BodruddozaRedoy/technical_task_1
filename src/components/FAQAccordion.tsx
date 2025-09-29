@@ -29,8 +29,8 @@ export default function FAQAccordion() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto my-10">
-      <h2 className="text-[24px] lg:text-[48px] md:text-[32px] font-bold text-center mb-[32px] md:mb-[40px] lg:mb-[120px]">Frequently Asked Questions</h2>
+    <div className="container mx-auto my-10">
+      <h2 className="text-[24px] lg:text-[48px] md:text-[32px] font-bold text-center mb-[32px] md:mb-[40px] lg:mb-[80px]">Frequently Asked Questions</h2>
       <div className="">
         {faqs.map((faq, index) => (
           <div
