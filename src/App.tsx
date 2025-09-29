@@ -4,7 +4,7 @@ import FAQAccordion from './components/FAQAccordion'
 export default function App() {
   return (
     <div>
-      <FAQAccordion/>
+      <FAQAccordion/> 
     </div>
   )
 }
