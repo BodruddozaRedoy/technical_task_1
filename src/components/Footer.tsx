@@ -4,7 +4,7 @@ import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 export default function Footer() {
     return (
         <footer className="bg-white mt-10">
-            <div className="container mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="container mx-auto px-6 py-10 grid grid-cols-1 justify-between lg:grid-cols-3 gap-8">
                 {/* logo + social */}
                 <div className="">
                     <h2 className="text-3xl font-bold mb-4">Business Logo</h2>
@@ -16,7 +16,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="md:flex space-y-8 space-x-8">
+                <div className="md:flex space-y-8 md:space-x-8">
                     {/* our services */}
                     <div className="w-1/3">
                         <h3 className="text-lg font-semibold mb-3">Our Services</h3>
