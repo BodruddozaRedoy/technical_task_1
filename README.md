@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# Technical Task 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive plumbing service landing page built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Desktop | Tablet | Mobile |
+| --- | --- | --- |
+| ![Desktop preview](public/large%20device.png) | ![Tablet preview](public/medium%20device.png) | ![Mobile preview](public/small%20device.png) |
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive FAQ accordion with smooth open and close state transitions powered by React hooks.
+- Bold Get In Touch call to action that pairs persuasive copy with a clear action button.
+- Comprehensive footer covering services, useful links, and contact details alongside branded social icons.
+- Utility first styling via Tailwind CSS 4 keeps spacing, typography, and colors consistent across breakpoints.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 with TypeScript
+- Vite dev server and build tooling
+- Tailwind CSS 4
+- React Icons for SVG iconography
+- ESLint for linting
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Ensure Node.js 18 or newer is installed.
+2. Install dependencies:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Launch the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+4. Build an optimized bundle:
+
+```bash
+npm run build
+```
+
+5. Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Available Scripts
+
+- `npm run dev` starts the Vite development server with hot module replacement.
+- `npm run build` type checks the project and outputs the production build.
+- `npm run preview` serves the production build locally for smoke testing.
+- `npm run lint` runs ESLint against the codebase.
+
+## Project Structure
+
+```
+technical-task-1/
+|-- public/
+|   |-- large device.png
+|   |-- medium device.png
+|   `-- small device.png
+|-- src/
+|   |-- App.tsx
+|   `-- components/
+|       |-- FAQAccordion.tsx
+|       |-- GetInTouch.tsx
+|       `-- Footer.tsx
+|-- package.json
+`-- vite.config.ts
+```
+
+## Customisation Tips
+
+- Update FAQ content in `src/components/FAQAccordion.tsx`.
+- Adjust CTA copy and button action in `src/components/GetInTouch.tsx`.
+- Replace placeholder footer links, contact details, and branding in `src/components/Footer.tsx`.
+- Swap the logo text with your own branding or image inside the footer component.
